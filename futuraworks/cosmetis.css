@@ -1,0 +1,218 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.h1{
+    display: flex;
+    justify-content: left; 
+    height: 40px;
+   
+}
+.main{
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-color: #fc2779;
+    background-image: url(https://adn-static1.nykaa.com/media/wysiwyg/2021/common-strip.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.h2{
+
+    display: flex;
+    align-items: center;
+    margin-left: 400px;
+}
+.h2 li{
+    display: inline;
+    padding: 8px;
+}
+.h2 li:hover{
+    color: #fc2790;
+}
+/*------------------------------------- Header2----------------------------- */
+
+
+.header2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.5px solid black;
+    height: 80px;
+}
+.img1{
+    margin-top: 15px;
+}
+.contents{
+    display: flex;
+}
+.contents li{
+    display: inline;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 15px;   
+
+}
+.contents li:hover{
+    color: #fc2790;
+}
+.input{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid white;
+    margin-left: 160px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    height: 45px;
+
+}
+.input input{
+    border: none;
+    outline: none;
+    height: 33px;
+    background: #f4f4f4;
+    padding: 10px;
+}
+.input i{
+    color: silver;
+    height: 20px;
+}
+.b1{
+    width: 85px;
+    height: 40px;
+    outline: none;
+    border: none;
+    margin-left: 30px;
+    border-radius: 8px;
+    color: #f4f4f4;
+    background-color: #E80071;
+}
+.header2 img{
+    margin-left: 15px;
+}
+.header2 button:hover{
+   background-color: #fc2790; 
+}
+
+/* --------------------------------------- Header3 --------------------------------------------*/
+
+.header3{
+    display: flex;
+    /* justify-content: center; */
+    /* margin-left: 50px; */
+    align-items: center;
+    height: 45px;
+    box-shadow: 1px 1px 10px gray ;
+}
+.list{
+    margin-left: 10px;
+}
+.list li:hover{
+    color: #fc2790;
+    font-smooth: inherit    ;
+}
+.list ul{
+    margin-left: 340px;
+}
+.list ul li{
+    display: inline;
+    padding: 10px;
+    color: rgba(3, 2, 26, 0.6);
+    /* margin-left: 50px; */
+}
+.im1{
+    margin-left: 50px;
+}
+.im1 img{
+    display: flex;
+    align-items: center;
+    margin: 2px;
+}
+
+/* --------------------------------------- Header4 --------------------------------*/
+.header4{
+    display: flex;
+    justify-content: center;
+    /* width: 2000px; */
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+.image1:hover{
+    transform: rotate(2deg);
+    /* box-shadow: 5px 5px 0px #E80071; */
+}
+.image1{
+
+    display:flex;
+    justify-content: center;
+
+}
+
+.image1 img{
+    padding: 10px;
+    /* box-shadow: 2px 2px 2px black; */
+    border-radius: 20px;
+    /* width: 100px; */
+}
+
+
+/* -------------------header5------------------------------- */
+.header5{
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 8px;
+
+}
+.im11{
+    padding: 10px;
+
+}
+.im11:hover{
+    transform: scale(1.1,1.1);
+    box-shadow: 5px 5px 5px #E80071;
+}
+.header6{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.im22{
+    transition: transform 0.1s;
+}
+.im22:hover{
+    transform: skew(36deg,36deg);
+    /* transform: rotate(160deg); */
+}
+.header7{
+    /* display: flex; */
+    justify-content: center;
+    padding: 20px;
+}
+.header7 h2{
+    margin-left: 25px;
+    margin-bottom: 20px;
+
+    
+}
+.im33{
+    display: flex;
+    justify-content: center;
+}
+.im33 :hover{
+    transform: translatey(-400px);
+
+}
