@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+h1:hover{
+    color: brown;
+}
+
+.vis :visited{
+    color: chartreuse;
+}
+.foc :focus{
+    color: red;
+    border: 2px solid green;
+    outline: none;
+}
+.act :hover{
+    /* color: blueviolet; */
+    background-color: blueviolet;
+}
+
+.elements ::before{
+    content: "this is before";
+    color: brown;
+}
+.elements ::after{
+    content: "this is after";
+    color: blue;
+}
+.elements ::first-line{
+    color: green;
+    text-transform: uppercase;
+}
+
+</style>
+
+
+
+<body>
+    <h1>hello</h1>
+
+
+
+    <div class="vis">
+    <a href="formwork.html">link</a>
+    </div>
+
+    <div class="foc">
+        <input type="text" placeholder="hi">
+    </div>
+
+    <div class="act">
+        <input type="text" placeholder="hellow">
+
+    </div>
+
+
+    <div class="elements">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti eius officiis inventore quod enim earum omnis tempora alias dignissimos! Laborum ad totam explicabo culpa quos! Ipsum, soluta. Nobis, veritatis?</h1>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>

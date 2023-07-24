@@ -1,0 +1,42 @@
+article{
+  
+  background-color: red;
+
+  #header1
+  {
+    font-style: italic;
+    text-align: center;
+    color: white;
+    background-color: black;
+  } 
+  
+  #header2
+  {
+    color: white;
+    background-color: black;
+    text-shadow:thistle;
+    text-align: center;
+    font-style: bold;
+
+  }
+    border:solid black;
+    margin: 50px;
+    padding: 100px;
+    /* border-radius: 50px; */
+    background-image: url(https://static.toiimg.com/thumb/msid-83600909,width-1280,resizemode-4/83600909.jpg);
+    background-size: cover;
+    .p1{
+      color: aliceblue;
+      background-color: rgb(180, 17, 17);
+      font-size: medium;
+    }
+
+
+        display: grid;
+        place-items: center; 
+        image-rendering: crisp-edges;
+        image-rendering: optimizeQuality;  
+        
+        
+     }
+
