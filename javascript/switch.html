@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"  id="input" >
+    <input type="button" value="enter" onclick="fun()">
+    <p id="dom updation"></p>
+
+    <script>
+
+        function fun()
+        {
+            var fruits=document.getElementById("input").value;
+            var a;
+            switch(fruits)
+            {
+            case "mango":
+                a="mango is good";
+                break;
+            case "apple":
+                a="apple is good";
+                break;
+            case "banana":
+                a="banana is good";
+                break;
+            case "dragon fruit":
+                a="dragon fruit is good";
+                break;
+            default:
+                a="not bad";
+                 
+            }
+            document.getElementById("dom updation").innerHTML=a;
+
+
+
+        }
+
+    </script>
+    
+</body>
+</html>
