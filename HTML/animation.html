@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    @keyframes anim {
+
+        0%{
+            background-color: aqua;
+            transform: rotate(-20deg) scale(2,2) translate(100px,100px);
+        }
+        50%{
+            background-color: blue;
+            transform: rotate(20deg);
+        }
+        75%{
+            background-color: brown;
+            transform: rotate(-20deg) translate(200px,200px);
+        }
+        100%{
+            background-color: black;
+            transform: rotate(180deg) translate(300px,300px);
+        }
+        
+    }
+
+
+    body{
+        background: green;
+    }
+    .head{
+        width: 100px;
+        height: 100px;
+        background-color: chocolate;
+        animation-name: anim;
+        animation-duration: 3s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite;
+
+    }
+    .head:hover{
+        animation-play-state: paused;
+    }
+
+
+
+
+
+</style>
+</head>
+<body>
+
+
+    <div class="head">
+        <h1>hellow</h1>
+    </div>
+    
+</body>
+</html>

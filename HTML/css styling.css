@@ -1,0 +1,16 @@
+div 
+{
+    background-image: url(https://stimg.cardekho.com/images/car-images/large/Tata/Harrier/9850/1681887806112/front-left-side-47.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: fixed;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    border:solid purple;
+    border-radius: 20px;
+    margin: 40px;
+    padding: 50px;
+
+
+}
