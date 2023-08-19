@@ -3,6 +3,8 @@ import Sample2 from "./Sample2";
 import Sample3 from "./Sample3";
 import './App.css';
 import Stylein from "./Stylein";
+import Hooks from "./Hooks";
+;
 
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
       <Sample/>
      <Sample3/>
      <Stylein/>
+     <Hooks/>
+     
      
 
     

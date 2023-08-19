@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock Animation</title>
+
+  <style>
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.clock {
+
+    /* animation-name: anim;
+        animation-duration: 3s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite; */
+
+
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 6px solid #333;
+  border-radius: 50%;
+}
+
+.hand {
+  position: absolute;
+  transform-origin: center;
+  background-color: #333;
+  transition: transform 0.5s cubic-bezier(0.4, 2.8, 0.2, 1);
+}
+
+.hour-hand {
+  width: 6px;
+  height: 70px;
+  top: 50px;
+  left: 97px;
+}
+
+.minute-hand {
+
+    
+
+  width: 4px;
+  height: 80px;
+  top: 40px;
+  left: 98px;
+}
+
+.second-hand {
+  width: 2px;
+  height: 85px;
+  top: 35px;
+  left: 99px;
+  background-color: #f00;
+  animation-name: anim;
+        animation-duration: 3s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite;
+}
+@keyframes anim {
+    0%{
+            background-color: aqua;
+            transform: rotate(360deg);
+        }
+        50%{
+            
+            transform: rotate(20deg);
+        }
+
+    
+}
+
+  </style>
+</head>
+<body>
+  <div class="clock">
+    <div class="hand hour-hand"></div>
+    <div class="hand minute-hand"></div>
+    <div class="hand second-hand"></div>
+  </div>
+</body>
+</html>

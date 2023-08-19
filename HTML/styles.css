@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    animation: rotateClock 43200s linear infinite; /* 12 hours in seconds */
+
+  }
+  
+  .clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 6px solid #333;
+    border-radius: 50%;
+    animation: rotateClock 43200s linear infinite; /* 12 hours in seconds */
+  }
+  
+  .hand {
+    position: absolute;
+    /* transform-origin: bottom center; */
+    background-color: #333;
+  }
+  
+  .hour-hand {
+    width: 6px;
+    height: 70px;
+    bottom: 50%;
+    left: calc(50% - 3px);
+    transform: rotate(0deg);
+  }
+  
+  @keyframes rotateClock {
+    10% {
+      transform: rotate(100deg);
+      color:#333 ;
+    }
+  }
+  

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+@keyframes blink {
+    
+    1%{
+        
+        background-color: violet;
+        /* background-color: yellow; */
+    }
+    20%{
+        background-color: indigo;
+        transform: rotate(-180deg)  translate(100px,100px);
+
+    }
+    40%{
+        background-color: blue;    
+    } 
+    50%{
+        background-color: green;  
+    } 
+    60%{
+        background-color: yellow;
+    }
+    80%{
+        background-color: orange;
+    }
+   
+    100% {              /* Defines the properties at these frames */
+        background: red;
+     
+        color: black;
+    }
+
+    
+}
+
+
+.container{
+    /* We will define the width, height and padding of the container */
+    /* The text-align to center */
+    width: 400px;
+    height: 60px;
+    padding: 32px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+
+    /* Use the animation `blink` to repeat infinitely for a time period of 2.5s*/
+    animation-duration: 5s;           
+    animation-iteration-count: infinite;
+    animation-direction: normal;        
+    animation-name: blink;    
+    animation-timing-function: ease-out;          
+    
+    /* The same can be written shorthand as     */
+    /* --------------------------------------   */
+    /* animation: 2.5s infinite normal blink;   */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>hellow</h1>
+    </div>
+    
+</body>
+</html>

@@ -3,9 +3,10 @@ import React from 'react'
 function Stylein() {
 
      const stye ={
-        backgroundcolor: "brown",
+        backgroundcolor: "yellow",
         padding: "20px",
         textAlign:"center",
+        color:"green",
     };
   return (
     <div>
