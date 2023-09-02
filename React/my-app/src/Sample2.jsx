@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Appcontext } from './Context'
 
 function Sample2() {
+  const value = useContext(Appcontext)
   return (
     <div>
-        <h1>hellooo</h1>
+        <h1>{value}</h1>
     </div>
   )
 }
