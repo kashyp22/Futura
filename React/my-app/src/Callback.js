@@ -1,0 +1,1 @@
+// function display(n1,n2)
