@@ -25,9 +25,6 @@ function App() {
       <Usereducer/>
       <Propseg/>
       <Reactone/>
-
-      
-      
     </div>
   );
 }
