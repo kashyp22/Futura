@@ -9,7 +9,7 @@ function Usereduce() {
     const Initial = 0;
     const reducer = (state,action)=>{
         console.log('action',action)
-        switch(action.type){
+        switch(action.type1){
             case 'increase':
                 return state=state+1
             case 'decrease':
@@ -20,6 +20,8 @@ function Usereduce() {
                 return state=state-2
             case 'multiple':
                 return state=state*2
+            case 'reset':
+                return  Initial
                 default:
             
             return state
@@ -37,11 +39,13 @@ function Usereduce() {
         <Link to={'mysecond'}><p>hellow</p></Link>
 
         <h1>{state}</h1>
-        <button onClick={()=>dispatch({type:'increase'})}>increase</button>
-        <button onClick={()=>dispatch({type:'decrease'})}>dcrease</button>
-        <button onClick={()=>dispatch({type:'increase2'})}>increase2</button>
-        <button onClick={()=>dispatch({type:'decrease2'})}>decrease2</button>
-        <button onClick={()=>dispatch({type:'multiple'})}>multiple2</button>
+        <button onClick={()=>dispatch({type1:'increase'})}>increase</button>
+        <button onClick={()=>dispatch({type1:'decrease'})}>dcrease</button>
+        <button onClick={()=>dispatch({type1:'increase2'})}>increase2</button>
+        <button onClick={()=>dispatch({type1:'decrease2'})}>decrease2</button>
+        <button onClick={()=>dispatch({type1:'multiple'})}>multiple2</button>
+        <button onClick={()=>dispatch({type1:'reset'})}>reset</button>
+
         <Superchild value={state}/>
     </div>
   )

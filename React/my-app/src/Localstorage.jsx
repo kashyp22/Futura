@@ -3,6 +3,7 @@ import React from 'react'
 
 const Localstorage = () => {
     localStorage.setItem('student','kashyap')
+
     const a=localStorage.getItem('student')
     console.log('***',a)
 

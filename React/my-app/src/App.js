@@ -19,6 +19,7 @@ import Usememo from "./Usememo";
 import Usecallback from "./Usecallback";
 import Inputget from "./Inputget";
 import Reduxuseffect from "./Reduxuseffect";
+import Useselector from "./work/Useselector";
 
 
 
@@ -58,6 +59,50 @@ function App() {
       path:'apifetch',
       element:<Reduxuseffect/>
     },
+    {
+      path:'Useref',
+      element:<Useref2/>
+    },
+    {
+      path:'Sample',
+      element:<Sample/>
+    },
+    {
+      path:'Sample2',
+      element:<Sample2/>
+    },
+    {
+      path:'Sample3',
+      element:<Sample3/>
+    },
+    {
+      path:'style',
+      element:<Stylein/>
+    },
+    {
+      path:'Hooks',
+      element:<Hooks/>
+    },
+    {
+      path:'appcontext',
+      element:<Appcontext/>
+    },
+    {
+      path:'Useref',
+      element:<Useref/>
+    },
+    {
+      path:'local storage',
+      element:<Localstorage/>
+    },
+    {
+      path:'api12',
+      element:<Apifetch/>
+    },
+    {
+      path:'use',
+      element:<Useselector/>
+    },
    
   ])
 
@@ -66,7 +111,14 @@ function App() {
 
   return (
 
-<RouterProvider router={myRouter}></RouterProvider>
+//<RouterProvider router={myRouter}></RouterProvider> 
+
+<>
+<Reduxuseffect/>
+<Useselector/>
+</>
+
+
 
  );
 }
