@@ -1,0 +1,398 @@
+=> REACT JS
+ 
+. used in front end
+. Single Page Application  (React Router Dom can be used to create single page application)
+. JS Library for buliding UI
+. Virtual DOM (case of DOM updation, entire page can not reload,and only that prticular function can be realod)
+. Fast Response
+. Open source
+
+   * NPM-Node Package Manager
+   * NPX-Node Package Execute
+   * rfce-React Functional Export Component
+   * rafce-React ArrowFunction Export Component
+
+.Each files in react called Component
+
+ *Function
+   .Function is a block of code designing to perform a perticular task
+   .function functionname()
+    {
+
+    }
+
+ *Arrow Function
+
+   . its provides new shorter synta for declaring function
+   . it convert normal variables to function
+   . only be useed as fn expression
+
+ *Hoisting
+ 
+   . A function can be call before the decalaration
+   . In the case of ArrowFunction Hoisting not worked
+
+ *Function Experssion
+  
+   . A function can be declared by converting a variable into that function and then the function will be called.
+
+ *CallBack function
+
+   . A function can be decalre inside of another function parameter..
+
+ *Callback Hell
+    
+   . case of multiple callback are nested on top of each other.Its complex to identify so we use PROMISE to reduce the complexity.
+
+ *Promise
+
+  . can be used to reduce callback hell
+  . promise is an object that reperasent asynchronus operation 
+  
+  . syntax
+
+      (return new promise(res,rej)=>) 
+   
+  . Two object Res and rej
+      
+     res-successfull value and rej-Error (position can be focused)
+
+  eg:
+    function hello (n1,n2){
+    return new promise(res,rej)=>
+    res(n1+n2)
+    }
+ 
+ *Async Await
+
+   .its act on asynchronuous function
+
+ *SetTimeout->it is an example for asynchronous operation
+	    ->it can be written inside of promise
+            ->used to delay time
+
+ *Try Catch
+
+   . it can be used to detect errors in the programm
+   . Result will be success then the part of Try can be worked,may be error displayed that time catch part worked
+   . secssion of Finally worked on both time
+         
+      eg:
+           Try
+             {
+             --------
+             --------
+             }
+            catch(err){
+             consoe.log(error);
+             }
+            finaly{
+            consloe.log('worked'}
+
+
+  *Local Storage
+
+    . value stored in a local storage,can not be erased after system is shutdown
+    . syntax
+
+       localstroage.setItem()
+          ->value can be stored in a key value pair
+         
+    . localstorage.clear()
+          -> data or value can be erased in the local storage
+    
+    . localstorage.getItem()
+          ->value of the setItem can be assign a variable
+
+ *Session Storage
+  
+    . Value stored in sessionstorage ,after the system shut down value to be erased
+    . Data can not be stored in permenently
+    . Sessionstorage.setItem('keys','hellohaii')
+
+    eg:
+           sessionstorage.setItem('keys','hellohaii')
+           const a=sessionstorage.getItem('keys')
+
+      
+ *HighOrderFunction
+   
+    . Function that takes other functions as an arrgument 
+
+ *Global Variables
+ 
+   . Can be accessed and modify from any part of the program,including functional brakets and modules.(can be accessed using 'this' function)
+
+          ->This Function
+    
+             .in java:this can be used to access global variables
+
+             .in js: if we call a function inside an object and with '.this' it will completely print the entire function and object.
+
+ *Local Variables
+
+   . Can not be access from outside the function or block in which they are declared.
+
+ *Closure
+
+  .Allow inner function to access the outer scope of a function.
+
+  . two functions, main and inner functions ,local scope of main function is inner function and lexical scope of inner function is main function
+
+     eg:
+		function display(){             ___	 
+	 ___		function display1(){		 |
+	|		console.log(a);			 |
+Local	|		}		__ __		 |   Lexical scope
+Scope	|	display()    __________|
+	|	}
+	|		const a=100
+	|__		display1()
+
+
+    ->Local scope, also known as function scope, refers to the visibility and accessibility of variables within a specific function or block of code.
+    ->Lexical scope, also known as static scope or closure scope, is a concept in which the scope of a variable is determined by its location within the source code at the time of its    declaration.
+
+ *ArrayDestructuring
+   
+   .It can be used to separate and print each elements in array.
+
+
+ *ObjectDestructuring
+  
+   .It can be used to separate and print each elements in object.
+
+ *uncontrolled
+
+   . Used to access Div elements
+   . value can be stored in thier on state
+   . eg:useRef
+
+ *Controlled
+
+   . Used to access React Components
+   . value can be stored in copmonents state.
+  
+
+ => ARRAY METHODS
+
+   1) Map
+     
+     . Used to display array elemnts
+     . value can be return
+     . Syntax
+          a.map((abc)=>{
+          console.log(abc);
+          })
+ 
+   2)ForeEach
+
+    . Used to display array elements
+    . Value cannot return
+    .Syntax
+        const a=[7,8,9,10]
+        a.forEach((abc)=>{
+        console.log(abc)
+        }) 
+
+   3)Fill 
+    
+     .add a new element to the perticular position
+     .Syntax
+         const fruits=["banana","mango","kiwi"]
+         fruits.fill("kiwi",1,2);
+         console.log(fruits);
+   4)Filter
+ 
+     .used to display elements followed  by a condition
+     .Syntax
+        const b=[10,20,30,40,50,60]
+        const c=b.filter((li)=>{
+        return li>20
+        })
+        console.log(c)
+
+   5)Slice
+  
+     . used to slice array elements based on index number
+     .Syntax
+         
+        const d=[1,2,3,4,5,6]
+        const e=d.slice(2,4)
+        console.log(e);
+
+  6)Splice
+
+    . used to splice array elements based on index number
+    . Syntax
+    
+       const f=[1,2,3,4,5,6]
+       const g=f.splice(2,5)
+       console.log(g)
+
+  7)Sort
+    
+    .array elements can be arrage assending or desending order   h-i assending  i-h desending
+    . eg
+
+        const h=[1,5,2,4,8,6]
+        const i=h.sort((h,i)=>{
+        return h-i
+        })
+        console.log(i)
+ 
+
+  8)Push 
+
+    . Add an elements to  end of the array
+    . Eg
+          const j=[2,3,4,5,7]
+          j.push(9)
+          console.log(j)
+
+  9)Pop
+
+    . delete last element on the array
+    . Eg
+          const k=[2,3,4,5,7]
+          k.pop()
+          console.log(k)
+
+ 10)shift
+
+    .delete first element in the array
+    .Eg
+         const l=[2,3,4,5,7]
+         l.shift()
+         console.log(l)
+
+ 11)unshift
+
+    .Add a new elements to the array in first
+    .Eg
+        const m=[2,3,4,5,7]
+        m.unshift(9)
+        console.log(m)
+
+  12)Some
+
+    .if one contition is true then the resut is true
+    .Eg
+        const abcd=[2,3,4,5,6,7]
+        const z=abcd.some(cde)
+	function cde(abcd){
+  	  return abcd >5
+	}
+	console.log(z);
+
+  13)Every 
+
+     .All the condition true then result is true
+     .Eg
+         const aa=[10,45,34,24]
+	 const y=aa.every(Checkaa)
+	 function Checkaa(){
+    	 return aa > 20
+	 }
+	 console.log(y);
+
+ 14)Includes
+
+     .Check the value is in or not
+     .Eg
+         const num=[32,43,54,13,35]
+         const num2=num.includes(54)
+         console.log(num2);
+
+ 15)Join
+
+     .join a new element to the array
+     .Eg
+	const num3=[3,4,5,7]
+	const add=num3.join(4)
+	console.log(add);\
+
+ 16)Reverese
+
+     .used to Reverese
+     .Eg
+        const num4=[3,4,5,6,7]
+        const rev=num4.reverse()
+        console.log(rev);
+
+ 17)Flat
+    
+     . USED TO COMBINE MULTIPLE ARRAY TO SINGLE ARRAY  
+     .Eg
+         const flat1=[1, 2, [3, [4, 5, 6], 7], 8]
+	 const flat2=flat1.flat(2)
+	 console.log(flat2);  
+
+
+
+ =>HOOKS
+
+      *used to change value/state of an object 
+      *Dom manipulation
+      *allow us to hook into react features such as state & life cycle methods.
+
+                .UseState
+		.UseRef
+		.UseContext
+		.UseEffect
+		.UseLayoutEffect
+		.UseReducer
+		.Usememo
+		.UseCallback
+ 
+      1)UseState
+		.allow us to track state in a function component
+		.import {useState} from "react" ;
+		.used to manage state (to change the current state of an component to another state).
+		.value will be store until we refresh it
+			eg: [state,setstate]=useState()
+
+      2)UseContext
+
+               .used to avoid or reduce props-drilling and also change state
+
+                 ->Props-drillig {same function components can be inherits to another component
+    
+
+     3)UseEffect
+              
+               .Used to maintain side effect(ithave a dependency array,the dependency array can be used to maintain side effect)
+               .used to fix API
+                   API-Appication Programing Interface
+                       ->used to connect back end and front end
+
+  4)useRef
+     
+              .Directly access and manage DOM elements
+              .Html elements can be edit,update,delete..
+       
+
+
+  5)UseReducer
+		
+                .to manage complex values
+		.eg:
+	  		const[state,dispatch]=useReducer(reducer,InitialState)
+		.state :value on the initial-state/ final value
+		.dispatch:to get the values in action
+		.use this method when multiple times usestates are coming
+  6)UseMemo
+
+               .Its return memorized value
+               .State can be changed then all components are rerenderd this case can be avoid we use usememo hook.
+
+  7)ReactMemo
+ 
+              .in the case of using props,parent and child components are rerenderd can be avoid this situation we use ReactMemo
+
+ 
+  8)UseCallback
+
+             .In the case of function can be used to pass props ,state can be changed then child rerenderd privent that sitution we use usecallback
+             .e.priventDefault ->before click a button never call the function
+             .e.target.value   ->value can be take input type(to call the current value)

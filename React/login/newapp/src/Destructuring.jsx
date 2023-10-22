@@ -29,7 +29,7 @@ function Destructuring() {
 // //spread
 const g ={a:1,b:2,c:3}
 const h ={d:2,e:2,f:3}
-const i=({...g,...h})
+const i=({...h,...g})
 console.log(i);
 
 

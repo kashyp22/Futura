@@ -4,15 +4,33 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import { Provider } from 'react-redux';
 import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { store,persistor } from './Redux/store';
+import { Contextprovider } from './Context/Context1';
 // import store from './Redux/store';
-import store from './Redux/store';
+// import store from './Redux/store';
+
+
+
+
+
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <Provider store={store}/> */}
     <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
 
-    <App />
+  <Contextprovider>
+  <App/>
+  </Contextprovider>
+  
+    
+
+
+    </PersistGate>
     </Provider>
     {/* <Provider/> */}
   </React.StrictMode>

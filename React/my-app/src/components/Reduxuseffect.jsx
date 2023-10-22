@@ -2,11 +2,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
-import { start } from './Redux/Redux1'
+import { removeData, start } from '../Redux/Redux1'
 
 const Reduxuseffect = () => {
     const [state,setstate]=useState([])
-// 26-09-2023 A data fetching throuh redux
+// 26-09-2023 A data fetching through redux
     const dispatch=useDispatch();
     useEffect(()=>{
         async function display(){
@@ -21,10 +21,14 @@ const Reduxuseffect = () => {
     },[])
     console.log('state data',state);
 
+    const display = ()=>{
+        dispatch(removeData())
+    }
+
 
   return (
     <div>
-         <h1></h1>
+        
        {/* {state.map((li)=>(
             <>
             <h1>{li.email}</h1>
@@ -32,6 +36,7 @@ const Reduxuseffect = () => {
             </>
         )
         )} */}
+        <button onClick={display}>click for removing data</button>
     </div>
   )
 }

@@ -5,7 +5,9 @@ const Useselector = () => {
     const data=useSelector((stat)=>stat.me.userinfo)
     console.log('123456',data);
   return (
-    <div>Useselector</div>
+    <div>Useselector
+      
+    </div>
   )
 }
 

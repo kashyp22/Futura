@@ -15,9 +15,6 @@
   background-color: grey;
 }
 
-
-
-
 .inpt1{
   width: 20%;
   height: 35px;
@@ -34,8 +31,6 @@
   /* margin: 50px; */
 }
 
-
-
 #btn1{
   width: 100px;
   height: 30px;
@@ -45,8 +40,9 @@
   border-radius: 5px;
   margin: 10px;
 }
+
 #head{
-  width: 500px;
+  width: 1300px;
   /* align-items: center; */
   
   

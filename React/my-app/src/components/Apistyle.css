@@ -1,0 +1,14 @@
+.card1{
+    display: flex;
+    justify-content: center;
+    /* background-color: bisque; */
+
+}
+.card2{
+}
+#one{
+    background-color: blue;
+    box-shadow: 20px 20px 20px black ;
+    /* padding: 10px; */
+    margin: 100px;
+}

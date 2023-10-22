@@ -6,9 +6,10 @@ function Propsdrill(props) {
 {props.value.map((li)=>(
     <>
     <h1>
-        {li.name}
-        
+        {li.name}       
     </h1>
+
+    
     <h3>{li.username}</h3>
     </> 
 ))}

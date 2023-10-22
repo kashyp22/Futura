@@ -13,9 +13,12 @@ const me = createSlice({
             console.log('********************************',action);
             state.userinfo.push(action.payload)
         },
+        removeData:(state)=>{
+            state.userinfo=[]
+        }
 
     }
 })
 
-export const {start}=me.actions
+export const {start,removeData}=me.actions
 export default me.reducer

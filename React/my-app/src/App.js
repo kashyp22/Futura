@@ -1,31 +1,39 @@
-import Sample from "./Sample";
+import Sample from "./components/Sample";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Bootstrap from "./Bootstrap";
 import { createBrowserRouter,RouterProvider } from "react-router-dom";
-import Sample2 from "./Sample2";
-import Sample3 from "./Sample3";
+import Sample2 from "./components/Sample2";
+import Sample3 from "./components/Sample3";
 import './App.css';
-import Stylein from "./Stylein";
-import Hooks from "./Hooks";
+import Stylein from "./components/Stylein";
+import Hooks from "./components/Hooks";
 import { Appcontext } from "./Context";
-import Useref from "./Useref";
-import Task from "./Task";
-import Useref2 from "./Useref2";
-import Useeffect from "./Useeffect";
-import Apifetch from "./Apifetch";
-import Localstorage from "./Localstorage";
-import Usereduce from "./Usereduce";
-import Usememo from "./Usememo";
-import Usecallback from "./Usecallback";
-import Inputget from "./Inputget";
-import Reduxuseffect from "./Reduxuseffect";
-import Useselector from "./work/Useselector";
+import Useref from "./components/Useref";
+import Task from "./components/Task";
+import Useref2 from "./components/Useref2";
+import Useeffect from "./components/Useeffect";
+
+import Localstorage from "./components/Localstorage";
+import Usereduce from "./components/Usereduce";
+import Usememo from "./components/Usememo";
+import Usecallback from "./components/Usecallback";
+import Inputget from "./components/Inputget";
+import Reduxuseffect from "./components/Reduxuseffect";
+// import Useselector from "./work/Useselector";
+import { useSelector } from "react-redux";
+
+import Usenavigate1 from "./components/Usenavigate1";
+import Bootstrap from "./components/Bootstrap";
+import Apifetch from "./components/Apifetch";
+import Useselector from "./components/Useselector";
+import Home from "./Context/Home";
+import Dispatch1 from "./components/Dispatch1";
 
 
 
 
 
 function App() {
+  
   const myRouter=createBrowserRouter([
     {
       path:'/',
@@ -103,6 +111,19 @@ function App() {
       path:'use',
       element:<Useselector/>
     },
+    {
+      path:'usenavigate',
+      element:<Usenavigate1/>
+    },
+    {
+      path:'Home',
+      element:<Home/>
+    },
+    {
+      path:'Dispatch1',
+      element:<Dispatch1/>
+    }
+   
    
   ])
 
@@ -111,12 +132,13 @@ function App() {
 
   return (
 
-//<RouterProvider router={myRouter}></RouterProvider> 
+<RouterProvider router={myRouter}></RouterProvider> 
 
-<>
-<Reduxuseffect/>
-<Useselector/>
-</>
+// {/* <Appcontext.Provider>
+// <Reduxuseffect/>
+// <Useselector/>
+// <Apifetch/>
+// </Appcontext.Provider> */}
 
 
 
