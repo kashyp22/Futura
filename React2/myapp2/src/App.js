@@ -5,6 +5,7 @@ import Useref1 from './Components/Useref1';
 import Usestate1 from './Components/Usestate1';
 import Usreducer1 from './Components/Usreducer1';
 
+
 function App() {
   const pathrouter=createBrowserRouter([
     {
@@ -19,6 +20,7 @@ function App() {
       path:'usereducer',
       element:<Usreducer1/>
     }
+   
 
   ])
 

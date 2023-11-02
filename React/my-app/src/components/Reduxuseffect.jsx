@@ -29,13 +29,13 @@ const Reduxuseffect = () => {
   return (
     <div>
         
-       {/* {state.map((li)=>(
+       {state.map((li)=>(
             <>
             <h1>{li.email}</h1>
             <h5>{li.username}</h5>
             </>
         )
-        )} */}
+        )}
         <button onClick={display}>click for removing data</button>
     </div>
   )

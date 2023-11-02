@@ -1,13 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
-const me = createSlice({
-    name:'me',
+const store = createSlice({
+    name:'store',
     initialState:{
         // value store in the userinfo by the state.userinfo.push(action.payload) this
         userinfo:[],
 
+        
+
     },
+    
     reducers:{
         start:(state,action)=>{
             console.log('********************************',action);
@@ -20,5 +23,5 @@ const me = createSlice({
     }
 })
 
-export const {start,removeData}=me.actions
-export default me.reducer
+export const {start,removeData}=store.actions
+export default store.reducer
