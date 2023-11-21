@@ -4,22 +4,27 @@ import './App.css';
 import Useref1 from './Components/Useref1';
 import Usestate1 from './Components/Usestate1';
 import Usreducer1 from './Components/Usreducer1';
+import Login from './Backend/Login';
+import Display from './Backend/Display';
+import Getdata from './Backend/Getdata';
+import Loginform from './loginform/Loginform';
+
 
 
 function App() {
   const pathrouter=createBrowserRouter([
     {
       path:'/',
-      element:<Usestate1/>
+      element:<Loginform/>
     },
     {
-      path:'useref1',
-      element:<Useref1/>
+      path:'signup',
+      element:<Login/>
     },
-    {
-      path:'usereducer',
-      element:<Usreducer1/>
-    }
+    // {
+    //   path:'usereducer',
+    //   element:<Usreducer1/>
+    // }
    
 
   ])
