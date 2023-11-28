@@ -1,7 +1,20 @@
 import React from 'react'
 import { useRef } from 'react'
+import { useDispatch } from 'react-redux'
+import { removedata } from '../Redux/Useredux'
 
 const Useref1 = () => {
+
+  // remove data dispatch from Useredux
+  const dispatch=useDispatch()
+
+
+  // remove data
+   
+  function logout(){
+    dispatch(removedata())
+   
+  }
 
 
     //  useref
@@ -37,6 +50,9 @@ const Useref1 = () => {
 
     <button onClick={click}> click</button>
     <button onClick={click2}>reset</button>
+
+
+    <h1> logout<button onClick={logout}>logout</button></h1>
 
     </div>
   )

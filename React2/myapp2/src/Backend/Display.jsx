@@ -12,43 +12,50 @@
 
 
 
-// import axios from 'axios'
-// import React, { useState } from 'react'
+import axios from 'axios'
+import React, { useState } from 'react'
 
-// const Display = () => {
-//     const [state,setState]=useState()
-//     console.log(state);
-//     const handleClick= async(data1)=>{
+const Display = () => {
+    const [state1,setState]=useState()
+    console.log('first',state1);
+    const handleClick= async()=>{
 
-//         try {
-//         const res=await axios.get('http://localhost:3000/api/getmethod',data1);
-//         console.log(' FIRSTdata', res.data);
-//         setState(res.data);
-//         }
-//         catch(err){
-//             console.log(err);
-//         }
-//     }
-//     return(
-//         <div>
-//             <div>
-//                 <button onClick={handleClick}>click to get data</button>
-//             </div>
+        try {
+        const res=await axios.get('http://localhost:3000/api/getmethod');
+        console.log(' FIRSTdata', res.data);
+        setState(res.data);
 
-//             <div>
-//                 <h1>data :</h1>
-//                 <h5>
-//                     {state.map((item) => (
-//                         <>
-//                         {/* <h4>id: {item._id}</h4> */}
-//                         <h4>username: {item.username}</h4>
-//                         <h4>password: {item.password}</h4>
-//                         <h4>email:{item.email}</h4>
-//                         </>
-//                     ))}
-//                 </h5>
-//             </div>
-//         </div>
-//     )
-// }
-// export default Display
+        }
+        catch(err){
+            console.log(err);
+        }
+    }
+    console.log('fundaaa',state1);
+    return(
+        <div>
+            <div>
+                <button onClick={handleClick}>click to get data</button>
+            </div>
+
+            <div>
+            {state1 && state1.length > 0 ? (
+                    state1.map((li, index) => (
+                        <>
+                        <h5 key={index}> username :{li.username}</h5>
+                        <h6 key={index}> email :{li.email}</h6>
+                        </>
+                    ))
+                ) : (
+                    <p>No data available</p>
+                )}
+
+               
+                
+            {/* {state1.map((li)=>(
+                <h1>{li.username}</h1>
+            ))} */}
+             </div>
+        </div>
+    )
+}
+export default Display

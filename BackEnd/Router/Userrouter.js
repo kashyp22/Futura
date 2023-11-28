@@ -3,12 +3,14 @@
     const router=require('express').Router() //create a variable and import express
 
     const AAbatch=require('../Models/Userschema') //import users from usersschema
-
+// crypto-js is used to encrypt and decrypt particular password or anything
     const Crypto=require('crypto-js')
+
+    const jwt = require('jsonwebtoken')
 // connect front to backend 
 
 
-// *****************POST METHOD
+// ***************** sign up POST METHOD
     router.post('/postmethod',async(req,res)=>{  // router.post -value can be take frontend to backend  /postmethod-just a name for api, its userdefind
 
     // req.body have the forntend data backend
@@ -34,18 +36,34 @@
 // ***********Login form post
     router.post('/loginform', async (req,res)=>{
 
+//  crypto
         try{
            const DB = await AAbatch.findOne({email:req.body.email})  // 
            !DB && res.status.apply(401).json({response:"please check your email"})
            console.log('backend data',DB);
+
            const hashedPassword = Crypto.AES.decrypt(DB.password,process.env.Crypto_js)
            console.log('hashed password',hashedPassword);
+
            const originalPassword = hashedPassword.toString(Crypto.enc.Utf8)  // to change buffercode 
            console.log('original password is ', originalPassword);
+
            originalPassword != req.body.password && res.status(404).json({response:"password and email doesn't match"})
-           res.status(200).json("Sucess")
+        //    res.status(200).json("Sucess")
+
+        const accesstoken=jwt.sign({
+            id:DB._id
+           },process.env.jwt_sec,
+           {expiresIn:'1min'})
+           
+           const{password,...others}=DB._doc
+           console.log('***********',others);
+
+        res.status(200).json({...others,accesstoken})
+
 
         }catch(err){
+            console.log(err);
             res.status(400)
 
         }
@@ -56,7 +74,7 @@
     router.get('/getmethod', async(req,res)=>{
             console.log(req.params);
         try{
-             const backenddata=await AAbatch.find()   // here find() is used to get all data in the database
+              const backenddata=await AAbatch.find()   // here find() is used to get all data in the database
             // const backenddata=await AAbatch.findById(req.params);
             console.log(backenddata);
             res.status(200).json(backenddata)

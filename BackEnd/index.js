@@ -16,6 +16,8 @@
 
         //  delete and new userrouter page credrouter is created
         const credroute=require('./Router/Crudrouter')
+        // token is assign a variable
+        const token=require('./Router/token')
 // step:2
 
 //mongoose is the Mongoose library, which is an Object Data Modeling (ODM) library for MongoDB and Node.js.
@@ -31,6 +33,8 @@ app.use(express.json())
 app.use('/api',userrouter)
 // ****delete is done here also
 app.use('/del',credroute)
+// token is done 
+app.use('/toke',token)
 
 
 // ********** step:1 backend server is created*********

@@ -8,7 +8,7 @@ const [state,setstate]=useState([])
             const res=await axios.get('http://localhost:3000/api/getmethod')
             console.log('data ?',res.data);
 setstate(res.data)
-        }
+        } 
 display()
     },[])
     console.log(state);
