@@ -38,6 +38,8 @@ const Display = () => {
             </div>
 
             <div>
+
+                
             {state1 && state1.length > 0 ? (
                     state1.map((li, index) => (
                         <>

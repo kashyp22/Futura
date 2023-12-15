@@ -6,6 +6,7 @@ const Login = () => {
     const[username,setusername]=useState('')
     const[email,setemail]=useState('')
     const[password,setpassword]=useState('')
+    const[image,setImage]=useState({});
 
     const display=()=>{
         signupdata({username,email,password})
@@ -14,15 +15,19 @@ const Login = () => {
   return (
     <div>
 
-
+    <form action="" onSubmit={display} encType='multipart/form-data'>
       <div><h1>Sign Up</h1></div>
         <div>
             <input type="text" placeholder='username' value={username} onChange={(e)=>setusername(e.target.value)}/> <br />
             <input type="email" placeholder='email' value={email} onChange={(e)=>setemail(e.target.value)}/> <br />
             <input type="password" placeholder='password' value={password}onChange={(e)=>setpassword(e.target.value)}/> <br />
-            <br /><button onClick={display}>Submit</button>
+            <input type="file"  filename='image' onChange={(e)=>setImage(e.target.files)} />
+            <br /><button type='submit'>Submit</button>
+
+            
             
         </div>
+      </form>
     </div>
   )
 }

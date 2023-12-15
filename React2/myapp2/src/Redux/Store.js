@@ -18,7 +18,7 @@ import storage from 'redux-persist/lib/storage'
 import Useredux from './Useredux'
 
 const persistConfig = {
-  key: 'roots ',
+  key: 'kashyb',
   version: 1,
   storage,
 }

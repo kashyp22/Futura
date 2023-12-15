@@ -11,6 +11,14 @@
         const cors=require('cors')
         app.use(cors())
 
+// middle ware app.use first exicutable
+
+        // app.use(function(req,res,next){
+        //         console.log('first work');
+        //         next()
+        // })
+
+
 // step:3 export from the userrouter.js file to 
         const userrouter=require('./Router/Userrouter') //This line invokes the config() method provided by the dotenv library, which loads the environment variables defined in a .env file into process.env
 
@@ -39,7 +47,7 @@ app.use('/toke',token)
 
 // ********** step:1 backend server is created*********
 // .listen(3000, ...) is a method used to start a web server and make it listen for incoming connections on a specific port. In this case, it's listening on port 3000.
-        app.listen(3000,()=>{
+        app.listen(5000,()=>{
             console.log('server is connected');
         })
 

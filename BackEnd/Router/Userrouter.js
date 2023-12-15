@@ -7,7 +7,54 @@
     const Crypto=require('crypto-js')
 
     const jwt = require('jsonwebtoken')
+
+    const {verifyToken} = require('../Verifytoken')
+    const { verifyTokenAndauthorization } = require('../Verifytoken')
+const multer = require('multer')
 // connect front to backend 
+
+//  multer 
+ 
+const storage=multer.diskStorage({
+    destination:(req,file,cb) =>{
+        cb(null,'../Desktop/extra works/REACT work/works/public/Images')
+        console.log('reqqqqqqqqqqqqqqqqqqqqq1234455',req);
+    },
+    filename:(req,file,cb)=>{
+        cb(null,file.originalname)
+    }
+})
+
+const upload=multer({storage:storage});
+
+router.post('/',upload.single('Images'),(req,res)=>{
+    console.log('form dataaaaaaa1234',req.body);
+    console.log('form dataaa3425 file',req.file);
+
+    const newUser= new AAbatch({
+        username:req.body.username,
+        email:req.body.email,
+        password:req.body.password,
+        Images:req.file.originalname,
+
+    })
+    try{
+        const savedUser= newUser.save()
+        res.status(201).json(savedUser)
+    }catch(err){
+        res.status(500).json(err)
+
+    }
+})
+
+
+
+
+
+
+
+
+
 
 
 // ***************** sign up POST METHOD
@@ -22,6 +69,7 @@
         password:Crypto.AES.encrypt(req.body.password,process.env.Crypto_js).toString(),
         email:req.body.email
     })
+    console.log('new user',newUser);
 
     try{
         const saveduser=await newUser.save() //savedUser must be used ..before save the new user documents to database
@@ -54,7 +102,7 @@
         const accesstoken=jwt.sign({
             id:DB._id
            },process.env.jwt_sec,
-           {expiresIn:'1min'})
+           {expiresIn:'5days'})
            
            const{password,...others}=DB._doc
            console.log('***********',others);
@@ -87,7 +135,7 @@
 // UPDATE *******BY .PUT 
 
     router.put('/updatedata/:id', async(req,res)=>{
-        console.log(req.params.id);
+        console.log('reqqqqq',req.params.id);
         try{
             const resdata=await AAbatch.findByIdAndUpdate(req.params.id,{
                 
@@ -100,5 +148,35 @@
         }
     })
 
+//middleware get method token verification to get the database details
+
+    router.get('/getdataverifytoken/:id',verifyToken,verifyTokenAndauthorization,async(req,res)=>{
+        try{
+        const res1=await AAbatch.findById(req.params.id)
+        res.status(200).json(res1)
+
+        }catch(err){
+            res.status(500).json(err)
+        }
+    })
 
 module.exports=router
+
+
+
+router.put('/updatedatainfrontend/:id', async (req, res) => {
+    console.log('reqqqqq', req.params.id);
+    try {
+      const resdata = await AAbatch.findByIdAndUpdate(req.params.id, {
+        $set: {
+          username: req.body.username,
+          email: req.body.email,
+          // other fields if needed
+        },
+      }, { new: true });
+      res.status(200).json(resdata);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+  

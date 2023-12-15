@@ -5,7 +5,7 @@ const Getdata = () => {
 const [state,setstate]=useState([])
     useEffect(()=>{
        async function display(){
-            const res=await axios.get('http://localhost:3000/api/getmethod')
+            const res=await axios.get('http://localhost:7000/api/getmethod')
             console.log('data ?',res.data);
 setstate(res.data)
         } 

@@ -26,10 +26,10 @@ if (data) {
       path:'/',
       element: token ? <Homepage/> : <Loginform/>
     },
-    {
-      path:'signup',
-      element:<Login/>
-    },
+    // {
+    //   path:'signup',
+    //   element:<Getdata/>
+    // },
     // {
     //   path:'usereducer',
     //   element:<Usreducer1/>

@@ -1,5 +1,5 @@
-// This js file is responsible for another Userrouter   
-// ********helps to complecx authetication 
+// This js file is another Userrouter   
+// ********helps to complex authetication 
 
 const router=require('express').Router()
 const AAbatch=require('../Models/Userschema')
