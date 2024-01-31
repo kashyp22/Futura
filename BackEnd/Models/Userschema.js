@@ -5,7 +5,6 @@ const mongoose=require('mongoose')
 const Userschema=new mongoose.Schema({
     // username:{type:String,require:true} //require:true is user to make this field compulsory
     username:{type:String},
-    secondname:{type:String},
     email:{type:String},
     password:{type:String},
     Images:{type:String},
@@ -13,3 +12,4 @@ const Userschema=new mongoose.Schema({
 },{timelaps:true})  //to add the data and time the value is added/edited in database
 
 module.exports=mongoose.model("AAbatch",Userschema)  //here 'users' is the name of the collection you are creating
+

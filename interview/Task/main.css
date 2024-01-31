@@ -1,0 +1,89 @@
+
+
+/*------------- header ---------------*/ 
+.header1{
+    background-color:#fc6c5d;
+}
+
+.header_element{
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+   
+}
+.header_element p{
+/* margin: 10px; */
+}
+.arrow {
+    margin-left: 5px;
+    /* width: 10px; */
+}
+.register{
+    font-style:normal;
+    margin-left: 15px;
+}
+
+
+
+/*-------------------- logo------------------ */
+.logo{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.heading{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.ppp{
+    margin-top: 35px;
+    /* margin-right: 250px; */
+    /* margin-bottom: 100px; */
+}
+
+
+/*----------------------- navbar--------------------- */
+/* Default styles for larger screens */
+
+.nav-item{
+    display: flex;
+    /* justify-content: space-between; */
+     margin-left: 40px; 
+    /* margin-right: 100px; */
+    
+}
+.collapse{
+    /* display: flex; */
+    /* flex-direction: row; */
+    margin-left: 80px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    /* height: 50px; */
+    margin-right: 80px;
+}
+
+/*-------------------- cards----------------- */
+.cards{
+    display: flex;
+    /* margin-left: 100px; */
+}
+
+
+.card_1{
+    margin-top: 120px;
+    border-radius: none;
+    margin-left: 105px;
+    width: 700px;
+}
+.image{
+    /* display: flex; */
+    /* justify-content: left; */
+    height: 500px;
+    width: 550px;
+    /* margin-left: 930px; */
+    margin-top: 50px;
+    box-shadow: 50px 30px 2px rgb(240, 233, 240);
+}

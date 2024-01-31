@@ -10,14 +10,19 @@
 
     const {verifyToken} = require('../Verifytoken')
     const { verifyTokenAndauthorization } = require('../Verifytoken')
-const multer = require('multer')
+
+// multer is used to save image and save the image in the publid image folder  
+     //  multer
+    const multer = require('multer')
+// const { response } = require('express')
 // connect front to backend 
 
 //  multer 
+// const a='../../../Desktop/extra works/REACT work/works/public/Images'
  
 const storage=multer.diskStorage({
     destination:(req,file,cb) =>{
-        cb(null,'../Desktop/extra works/REACT work/works/public/Images')
+        cb(null,'../REACT work/works/public/Images')
         console.log('reqqqqqqqqqqqqqqqqqqqqq1234455',req);
     },
     filename:(req,file,cb)=>{
@@ -27,23 +32,53 @@ const storage=multer.diskStorage({
 
 const upload=multer({storage:storage});
 
-router.post('/',upload.single('Images'),(req,res)=>{
-    console.log('form dataaaaaaa1234',req.body);
-    console.log('form dataaa3425 file',req.file);
+// router.post('/',upload.single('Images'),(req,res)=>{
+//     console.log('form dataaaaaaa1234',req.body);
+//     console.log('form dataaa3425 file',req.file);
 
-    const newUser= new AAbatch({
+//     const newUser= new AAbatch({
+//         username:req.body.username,
+//         email:req.body.email,
+//         password:req.body.password,
+//         Images:req.file.originalname,
+
+//     })
+//     try{
+//         const savedUser= newUser.save()
+//         res.status(201).json(savedUser)
+//     }catch(err){
+//         res.status(500).json(err)
+
+//     }
+// })
+
+
+
+
+router.post('/postmethod',upload.single('Images'),(req,res)=>{  // router.post -value can be take frontend to backend  /postmethod-just a name for api, its userdefind
+
+    // req.body have the forntend data backend
+    console.log('postman data?',req.body); // req.body-data can be taken to frontend  ,it contains the data send in the post request by clients
+    // const newUser=new AAbatch(req.body)  // all data is fetch to the database through the req.body
+
+    console.log('req.file',req.file );
+    console.log('reqqqqqq',req.file.originalname);
+
+    const newUser=new AAbatch({
         username:req.body.username,
+        password:Crypto.AES.encrypt(req.body.password,process.env.Crypto_js).toString(),
         email:req.body.email,
-        password:req.body.password,
         Images:req.file.originalname,
-
     })
+    console.log('new user',newUser);
+
     try{
-        const savedUser= newUser.save()
-        res.status(201).json(savedUser)
+        const saveduser= newUser.save() //savedUser must be used ..before save the new user documents to database
+        res.status(200).json(saveduser)
+        // 200
     }catch(err){
         res.status(500).json(err)
-
+        // 500
     }
 })
 
@@ -53,12 +88,8 @@ router.post('/',upload.single('Images'),(req,res)=>{
 
 
 
-
-
-
-
 // ***************** sign up POST METHOD
-    router.post('/postmethod',async(req,res)=>{  // router.post -value can be take frontend to backend  /postmethod-just a name for api, its userdefind
+    router.post('/postmethod1',async(req,res)=>{  // router.post -value can be take frontend to backend  /postmethod-just a name for api, its userdefind
 
     // req.body have the forntend data backend
     console.log('postman data?',req.body); // req.body-data can be taken to frontend  ,it contains the data send in the post request by clients
@@ -81,14 +112,17 @@ router.post('/',upload.single('Images'),(req,res)=>{
     }
 })
 
+
+
 // ***********Login form post
     router.post('/loginform', async (req,res)=>{
 
 //  crypto
         try{
-           const DB = await AAbatch.findOne({email:req.body.email})  // 
+           const DB = await AAbatch.findOne  ({email:req.body.email})  // 
            !DB && res.status.apply(401).json({response:"please check your email"})
            console.log('backend data',DB);
+        //    console.log(response);
 
            const hashedPassword = Crypto.AES.decrypt(DB.password,process.env.Crypto_js)
            console.log('hashed password',hashedPassword);

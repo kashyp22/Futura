@@ -21,6 +21,8 @@ function Usecallback() {
       <button onClick={show}>click1</button>
       <button onClick={show1}>click</button>
       <Hello value={RREnder}/>
+      
+      {/* <h3>{RREnder}</h3> */}
 
       {/* <Hello value={state}/> */}
     </div>

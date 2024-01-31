@@ -4,7 +4,7 @@ import {  userRequest } from './requestmethod';
 export const signupdata=async(datas)=>{
     console.log('firstdata ',datas);
     try{
-        const res=await axios.post('http://localhost:3000/api/postmethod',datas)
+        const res=await axios.post('http://localhost:7000/api/postmethod',datas)
         // const res= await publicRequest.post('/postmethod',datas)
 
         console.log('finaldata ',res);
@@ -18,7 +18,7 @@ export const signupdata=async(datas)=>{
     export const Loginapi=async (dispatch,data)=>{
         console.log('loginapi',data);
         try{
-            const res=await axios.post('http://localhost:3000/api/loginform',data)
+            const res=await axios.post('http://localhost:7000/api/loginform',data)
         // const res= await publicRequest.post('/loginform',data)
 
             dispatch(userDetails(res.data))
@@ -32,6 +32,8 @@ export const signupdata=async(datas)=>{
         console.log('parameter of profiledetails id in api call',params);
         try{
             const res2=await userRequest.get(`/getdataverifytoken/${params}`)
+            // const res2=await axios.get(`http://localhost:7000/api/getdataverifytoken/${params}`)
+
             console.log('apicall final result res2', res2);
             return res2
 

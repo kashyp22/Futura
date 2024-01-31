@@ -27,6 +27,7 @@ import Apifetch from "./components/Apifetch";
 import Useselector from "./components/Useselector";
 import Home from "./Context/Home";
 import Dispatch1 from "./components/Dispatch1";
+// import Usecallback2 from "./components/Usecallback2"
 
 
 
@@ -52,7 +53,7 @@ function App() {
       element:<Usememo/>
     },
     {
-      path:'fifth',
+      path:'usecallback',
       element:<Usecallback/>
     },
     {

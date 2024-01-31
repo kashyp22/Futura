@@ -1,0 +1,30 @@
+.one{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* background-color: aqua; */
+}
+.two{
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+}
+.main-card{
+    /* display: flex; */
+    /* justify-content: center; */
+}
+.three{
+    margin-left: 100px;
+}
+.one1{
+    display: flex;
+    justify-content: center;
+    display: inline;
+    background-color: aquamarine;
+}
+.main-card{
+    /* background-color: blueviolet; */
+}
+.card2{
+    background-color: white;
+    /* width: 0px; */
+}

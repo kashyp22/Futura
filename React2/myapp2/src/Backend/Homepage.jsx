@@ -6,7 +6,7 @@ import { profiledetails } from './apicall'
 
 const Homepage = () => {
     const [state1,setProfile]=useState()
-    const dispatch=useDispatch()
+    const dispatch=useDispatch()  
 
     const fulldata=useSelector((state)=>state.users.userValue)
     console.log('full data in homepage',fulldata);
